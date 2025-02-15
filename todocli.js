@@ -94,6 +94,7 @@ program.command('show')
         if (todos.length === 0) {
             console.log(chalk.yellow('Todo is Empty'));
 
+            
         } else {
             todos.forEach((element, index) => {
 
