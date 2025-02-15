@@ -52,6 +52,39 @@ program.command('add')
         console.log(chalk.red.bold(`Todo added: ${todo}`))
     })
 
+
+    program.command('Detail')
+    .description('Detail about this project')
+    .action(() => {
+        console.log(chalk.blue.bold(`
+        📌 Todo CLI Project
+
+        This is a simple command-line interface (CLI) Todo List application built with Node.js. 
+        It allows users to manage their tasks efficiently with the following features:
+
+        ✅ Add new tasks using the 'add' command.
+        📜 View all tasks using the 'show' command.
+        ❌ Delete the last task using the 'delete' command.
+        ✏️ Edit existing tasks using the 'edit' command.
+        ✅ Mark tasks as completed using the 'complete' command.
+        
+        Usage:
+        - To add a task: todo add "Buy groceries"
+        - To view tasks: todo show
+        - To mark a task as complete: todo complete "Buy groceries"
+        - To edit a task: todo edit "Old task" "New task"
+        - To delete the last task: todo delete
+
+        Built using:
+        - Node.js
+        - Commander.js for CLI functionality
+        - Chalk for colored console output
+        - File system (fs) for data persistence
+
+        📌 Happy Task Managing!
+        `));
+    });
+
 program.command('show')
     .description('show all your todos')
     .action(() => {
